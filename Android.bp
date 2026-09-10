@@ -1,0 +1,32 @@
+// ViPER4Android RE prebuilts extracted from aospa_gapps.
+
+android_app_import {
+    name: "ViPER4Android",
+    apk: "proprietary/system/priv-app/ViPER4Android/ViPER4Android.apk",
+    presigned: true,
+    preprocessed: true,
+    privileged: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libv4a_re",
+    owner: "viper4android",
+    vendor: true,
+    compile_multilib: "both",
+    relative_install_path: "soundfx",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/soundfx/libv4a_re.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/soundfx/libv4a_re.so"],
+        },
+    },
+}
