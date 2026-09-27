@@ -129,5 +129,10 @@
             </devicePort>
         </deviceEffects>
     -->
+    <postprocess>
+        <stream type="music">
+            <apply effect="v4a_standard_re"/>
+        </stream>
+    </postprocess>
 
 </audio_effects_conf>

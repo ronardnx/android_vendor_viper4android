@@ -128,6 +128,7 @@
     </effects>
     <postprocess>
         <stream type="music">
+            <apply effect="v4a_standard_re"/>
             <apply effect="music_helper"/>
         </stream>
         <stream type="ring">
